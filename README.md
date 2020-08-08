@@ -1,3 +1,40 @@
+Specs Check list:
+  1. 20pts - Code Plan - Include this in a README.md file in your folder with comment in your code.
+  2. 20pts - Can add People to Players - When clicked the people are added to the Players column and removed from the People list while getting new values of a player added to them.
+  3. 20pts - Can add Players to different Teams - When we click on the blue button the Player is added to the blue team and removed from the Player list while also getting the keys color and mascot extended to them when they are moved to a team.
+  4. 20pts - Uses class - This is not a hack job. You should use class to add the new properties you need and extend when you need.
+  5. 20pts - Minimum 3 Unit Tests - Use Mocha and Chai to give us at least 3 unit tests that prove a person becomes a player and a player becomes a teammate.
+
+Prompt: 
+  Work through the follow challenges:
+  Use the class keyword to create a template of a dodgeBallPlayer that requires canThrowBall, canDodgeBall, hasPaid, isHealthy, yearsExperience.
+  Push these new dodge ball Player objects into a new array and then display them in the DOM as available players to pick.
+  Add a button to each new player that will allow each one to be selected for either Blue Team or Red Team and now has mascot and teamColor
+  Use the this keyword to assign each player to a team with an onclick. Assign them to either Blue Team or Red Team.
+  Display the two teams in a new list in the DOM with appropriate titles.
+  Create 3 tests for your application.
+
+Code Plan
+  1. add starter code
+  2. create an input tag to add a new applicant with the same info as players
+  3. create a button that will add the new applicant to the bottom of applicants list
+  4. create a button that will move an applicant to players lists
+  5. create a class that consists of constructors of a player - canThrowBall, canDodgeBall, hasPaid, isHealthy, yearsExperience
+  6. connect a class that extends new players the same constructors of other roster players
+  7. create a button/column for blue team and red team
+  8. create function that will move a player on the roster to team columns and adds more constructors of color and mascot
+  9. create a tests
+    a. can create a new player properly
+    b. new player is added to the bottom of the roster
+    c. class adds constructors to new players
+    d. movement to teams works properly
+    e. when moved new constructors get added to players
+  10. Create a randomizer button
+
+
+
+
+
 # Setup Boilerplate
 
 DO THIS FIRST!
