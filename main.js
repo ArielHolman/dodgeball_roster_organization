@@ -129,7 +129,7 @@ const listApplicants = (arr) => {
       this.document.createTextNode(`${applicant.name} - ${applicant.age}`)
     )
     allApplicants.append(li)
-  })git status
+  })
 }
 const deleteApplicant = (event) => {
   const applicant = event.target.parentNode
