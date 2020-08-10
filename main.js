@@ -1,4 +1,9 @@
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-use-before-define */
+/* eslint-disable array-callback-return */
+/* eslint-disable no-undef */
 /* eslint-disable max-classes-per-file */
+// eslint-disable-next-line prefer-const
 let arrOfApplicants = [
   {
     id: 2,
@@ -51,16 +56,11 @@ let arrOfApplicants = [
   },
 ]
 
-// id: 2,
-//     name: "Charles Young",
-//     age: 55,
-//     skillSet: "welding",
-//     placeBorn: "Omaha, Nebraska",
-
 const listOfPlayers = []
 const dodgeFathersTeam = []
 const ballarinasTeam = []
 
+// created class for applicants because it made the most sense since we wanted to carry over infromation from the applicant becoming a player.
 class Applicant {
   constructor(name, id, age, skillSet, placeBorn) {
     this.id = id
@@ -73,7 +73,6 @@ class Applicant {
 
 const makeTeamMate = (teamName, id, name) => {
   // if onclick dodge fathers then assign mascot, color and move to dodgefathers array and show on the DOM
-  // if onclick ballerinas then assign mascot, color and move to ballerinas array and show on the DOM
   if (teamName === "dodgeFathers") {
     const teamMate = new TeamMate(
       name,
@@ -84,6 +83,7 @@ const makeTeamMate = (teamName, id, name) => {
     ).addTeamMate()
     dodgeFathersTeam.push(teamMate)
   } else {
+    // if onclick ballerinas then assign mascot, color and move to ballerinas array and show on the DOM
     const teamMate = new TeamMate(
       name,
       "Swans",
@@ -94,7 +94,7 @@ const makeTeamMate = (teamName, id, name) => {
     ballarinasTeam.push(teamMate)
   }
 }
-// Add player class to people who become players
+// Add player class constructos to people who become players
 class Player extends Applicant {
   constructor(
     name,
@@ -123,7 +123,7 @@ class Player extends Applicant {
     applicantName.appendChild(
       document.createTextNode(`${playerName} - ${playerId}`)
     )
-
+    // create a button to add a player to the Dodgefathers team
     const dodgeFathersbtn = document.createElement("button")
     dodgeFathersbtn.innerHTML = "Dodge Fathers"
     dodgeFathersbtn.addEventListener("click", function () {
@@ -131,6 +131,7 @@ class Player extends Applicant {
       deleteApplicant(event)
     })
 
+    // create a button to add a player to the Ballarinas team
     const ballarinasBtn = document.createElement("button")
     ballarinasBtn.innerHTML = "Ballarinas"
     ballarinasBtn.addEventListener("click", function () {
@@ -145,7 +146,7 @@ class Player extends Applicant {
   }
 }
 
-// Extend the mascot and colors to players once chosen on a team
+// Extend the mascot and colors to players once put into a team.
 class TeamMate extends Player {
   constructor(
     name,
@@ -188,19 +189,21 @@ class TeamMate extends Player {
   }
 }
 
+// will remove a li from it's parent node
 const deleteApplicant = (event) => {
   const applicant = event.target.parentNode
   const listOfApplicants = applicant.parentNode
   listOfApplicants.removeChild(applicant)
 }
 
+// this makes an applicnat into a player
 const makePlayer = (name, id) => {
   // const [applt] = arrOfApplicants.filter((applicant) => applicant.id === id)
   const player = new Player(name, id).addPlayer()
   listOfPlayers.push(player)
 }
 
-// Function that changes the applicants to a player
+// Function that adds the applicants the lists and creates a button to make a player
 const listApplicants = (arr) => {
   const allApplicants = this.document.getElementById("applicants")
   arr.map((applicant) => {
@@ -219,7 +222,15 @@ const listApplicants = (arr) => {
   })
 }
 
-// module.exports = { Player, BallarinasTeammate, DodgeFathersTeammate }
-window.onload = function () {
+// I deleted the button to load the list becuase I want the list to upload upon opening the site
+this.window.onload = function () {
   listApplicants(arrOfApplicants)
+}
+
+module.exports = {
+  Player,
+  TeamMate,
+  makeTeamMate,
+  makePlayer,
+  listApplicants,
 }
