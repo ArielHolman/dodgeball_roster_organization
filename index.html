@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Dodge Ball Roster</title>
-</head>
-<body>
-<h1>Dodge Ball Roster</h1>
-<script src="main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dodge Ball</title>
+  </head>
+  <body>
+    <h1>Welcome to Gym Class Heroes League</h1>
+    <div>
+      <p>Please see the list of applicants we have this year and decide if you would like to add them to your team! </p>
+      <!-- ****** WILL ADD THIS FUNCTIONALITY LATER ON
+      <p>Need to register a new player? Please fill out the below:</p> -->
+      <!-- <form onsubmit="submit()">
+        <div>
+          <label for="name">Name: </label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div>
+          <label for="age">Age: </label>
+          <input type="number" name="age" id="age" min="1" max="100" step="5" />
+        </div>
+        <div>
+          <label for="skills">Skill Set: </label>
+          <input type="text" name="skills" id="skills" />
+        </div>
+        <div>
+          <label for="placeBorn">Place Born: </label>
+          <input type="text" name="placeBorn" id="placeBorn" />
+        </div>
+        <button type="reset" id="reset">Reset</button>
+        <button type="submit" value="submit" id="submit">Submit</button>
+      </form> ******* -->
+    </div>
+    <div class="applicants-section">
+      <h4>List of Applicants</h4>
+      <ul id="applicants"></ul>
+    </div>
+    <div class="players-section">
+      <h4>Dodge Ball Players</h4>
+      <ul id="players"></ul>
+    </div>
+    <div class="team-one-section">
+      <h4>The Dodgefathers</h4>
+      <ul id="dodgeFathers"></ul>
+    </div>
+    <div class="team-two-section">
+      <h4>Ballarinas</h4>
+      <ul id="ballarinas"></ul>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>
